@@ -1,13 +1,120 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Vietnam Food</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+    <header class="menu">
+      <a href="index.html" class="menu-icon">
+        <img src="/public/foto/domecek.png" alt="Domů" />
+      </a>
+      <div class="logo">
+        <img src="./public/foto/cepicka-logo.png" alt="Logo" />
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
+    </header>
+
+    <nav id="dropdown-menu" class="hidden">
+      <ul>
+        <li><a href="Bum.html">Bun Bo Nam Bo</a></li>
+        <li><a href="Pho.html">Phở</a></li>
+        <li><a href="Poke.html">Poke bowl</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById('dropdown-menu').classList.toggle('hidden');
+      }
+    </script>
+
+    <section class="hero">
+      <section class="pulfoto">
+        <img src="/public/foto/pul-obrazek.png" alt="Vietnamese Food" class="hero-img" />
+      </section>
+      <section>
+        <img src="/public/foto/text-logo.png" alt="Taste of Vietnam Logo" class="hero-logo" />
+        <p class="hero-desc">
+          Let us show you the true taste of authentic Vietnamese cuisine. Discover traditional recipes, cooking tips, and the secrets behind Vietnam’s most beloved dishes.
+        </p>
+      </div>
+    </section>
+
+    <div class="red-line"></div>
+
+    <section class="jidla">
+      <h2>JÍDLA</h2>
+      <div class="carousel">
+        <button id="left-arrow">&#8592;</button>
+
+        <div class="jidlo-karta visible">
+          <img src="/public/foto/bum-bo-nam-bo.png" alt="Bun bo nam bo">
+          <h3>Bun bo nam bo</h3>
+          <p>Rýžové nudle, hovězí maso, bylinky a omáčka.</p>
+          <a href="/src/Bum.html"><button class="recept-btn">RECEPT</button></a>
+        </div>
+
+        <div class="jidlo-karta">
+          <img src="/public/foto/pho.png" alt="Pho">
+          <h3>Pho</h3>
+          <p>Tradiční vývar s rýžovými nudlemi a hovězím masem.</p>
+          <a href="/src/Pho.html"><button class="recept-btn">RECEPT</button></a>
+        </div>
+
+        <div class="jidlo-karta">
+          <img src="/public/foto/poke-bowl.png" alt="Poke Bowl">
+          <h3>Poke Bowl</h3>
+          <p>Rýže, zelenina, losos a omáčky ve vietnamském stylu.</p>
+          <a href="/src/Poke.html"><button class="recept-btn">RECEPT</button></a>
+        </div>
+
+        <button id="right-arrow">&#8594;</button>
+      </div>
+    </section>
     <script type="module" src="/src/main.js"></script>
+
+    <div class="red-line"></div>
+
+    <h2 class="tips-heading">RADY</h2>
+
+
+    <section class="tips-box">
+      <ul>
+        <li>Kosti před vařením spař a opláchni, aby byl vývar čirý.</li>
+        <li>Zázvor a cibuli opeč na sucho – dodají vývaru kouřovou chuť.</li>
+        <li>Vař vývar zlehka a dlouho (klidně 4–6 hodin), aby byl plný a jemný.</li>
+        <li>Koření krátce opeč nasucho, aby zvýraznilo aroma.</li>
+        <li>Maso krajej až ve finální fázi, aby ho vývarem zcela nepřevařilo.</li>
+        <li>Pokud chceš vařit pho ekonomičtěji, zkus slaný instantní základ s vývarem.</li>
+        <li>Dochucuj až nakonec – přidání polév. cukru a soli zvýší chuť vývaru podle sebe.</li>
+        <li>Pokud chceš extra silný vývar, vař směs kostí a masa současně 30 až 60 minutek bez zbytečných bylinek navíc.</li>
+        <li>Tím uvolnění aroma bude přesně podle potřeby a nebudou suroviny unavené končinkách.</li>
+        <li>Vývar dříve nesol, radši ho osol až na závěr.</li>
+        <li>Nech hotový vývar vychladnout pomalu – tuk vytvoří ochrannou vrstvu tuku a zakonzervuje chuť.</li>
+        <li>Ke klasické srirache je výborné mít i menší misku s jemnější omáčkou a čerstvou limetkou.</li>
+        <li>Pokud podáváš pho s hovězím, vždy přidej čerstvé bylinky jako koriandr a vietnamskou bazalku.</li>
+        <li>Tenčí plátky červeného masa můžeš přímo vložit do extrémně čirého vývaru a získají jemnou strukturu.</li>
+        <li>Po uvaření přidej čerstvou zeleninu nebo nakládanou ředkvičku – jídlo získá jemnou křupavost a nebudou se lepit.</li>
+      </ul>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+
+    <div class="red-line"></div>
+    
+    <section class="dotaznik">
+      <h2>Máte dotaz?</h2>
+      <form class="dotaz-form">
+        <label for="message">Napište nám:</label>
+        <textarea id="message" name="message" placeholder="Sem napište svůj dotaz..." required></textarea>
+        <button type="submit">Odeslat</button>
+      </form>
+    </section>
   </body>
 </html>
