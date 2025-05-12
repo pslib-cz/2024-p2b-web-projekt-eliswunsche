@@ -56,40 +56,48 @@ body {
   display: none;
 }   
 
-.hero {
+.hero-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #d9b2aa;
-  padding: 50px;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Levá půlka: obrázek */
+.pulfoto {
+  width: 50%;
 }
 
 .hero-img {
-  max-width: 400px;
+  width: 100%;
   height: auto;
-  border-radius: 20px;
-  justify-content: start;
+  display: block;
+  object-fit: cover;
 }
 
-.hero-text {
+/* Pravá půlka: logo + text */
+.logo-box {
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
-  text-align: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .hero-logo {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
-  margin-bottom: 20px;
 }
 
-.hero-desc {
-  font-size: 1.1rem;
-  font-weight: bold;
+.hero-subtext {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #333;
 }
 
 .section-title {
@@ -128,19 +136,19 @@ body {
 
 .jidlo-karta {
   background-color: #f7eaea;
-  border: 2px solid #941c1c;
+  border: 3px solid #941c1c;
   padding: 20px 60px;
-  width: 300px;
+  width: 700px;
   border-radius: 10px;
   text-align: center;
   display: none;
   text-align: center;
-  max-width: 300px;
+  max-width: 700px;
 }
 
 .jidlo-karta img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
@@ -222,7 +230,7 @@ body {
 /* Bílá karta s radami */
 .tips-box {
   background-color: #f7eaea;
-  border: 1px solid #8B0000;
+  border: 3px solid #8B0000;
   padding: 30px;
   font-weight: bold;
   text-align: center;
@@ -280,7 +288,7 @@ body {
   padding: 1rem;
   font-size: 1rem;
   resize: vertical;
-  border: 1px solid #8b0000;
+  border: 3px solid #8b0000;
   background-color: #f7eaea;
   border-radius: 5px;
 }
@@ -299,15 +307,123 @@ body {
   background-color: #a62828;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #C5A3A3;
+
+@media screen and (max-width: 768px) {
+  /* HERO sekce */
+    .hero-row {
+    flex-direction: row; /* důležité: zůstává vedle sebe i na mobilu */
   }
-  a:hover {
-    color: #747bff;
+
+  .pulfoto {
+    width: 50%;
   }
-  button {
-    background-color: #C5A3A3;
+
+  .logo-box {
+    width: 50%;
+    padding: 0.5rem;
+  }
+
+  .hero-logo {
+    max-width: 100%;
+  }
+
+  .hero-subtext {
+    font-size: 0.8rem;
+  }
+
+  /* Navigace */
+  .menu {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .menu-icon img,
+  .logo img {
+    height: 24px;
+  }
+
+  .hamburger {
+    font-size: 20px;
+  }
+
+  /* Jídelní karty */
+
+  .carousel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .jidlo-karta {
+    display: block;
+    width: 100%;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #f7eaea;
+  }
+  
+  .jidlo-karta img {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  
+  .jidlo-karta h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .jidlo-karta p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .recept-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+  
+  #left-arrow,
+  #right-arrow {
+    display: none;
+  }
+  .recept-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  /* Rady */
+  .tips-box {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  .tips-heading {
+    font-size: 1.2rem;
+  }
+
+  /* Dotazník */
+  .dotaznik {
+    padding: 1.5rem 1rem;
+  }
+
+  .dotaz-form {
+    width: 100%;
+  }
+
+  .dotaz-form textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .dotaz-form button {
+    font-size: 1rem;
+    padding: 0.6rem;
   }
 }
