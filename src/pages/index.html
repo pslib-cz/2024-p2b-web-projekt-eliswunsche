@@ -5,15 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vietnam Food</title>
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
   </head>
   <body>
     <header class="menu">
       <a href="index.html" class="menu-icon">
-        <img src="/public/foto/domecek.png" alt="Domů" />
+        <img src="%BASE_URL%images/domecek.png" alt="Domů" />
       </a>
       <div class="logo">
-        <img src="./public/foto/cepicka-logo.png" alt="Logo" />
+        <img src="%BASE_URL%images/cepicka-logo.png" alt="Logo" />
       </div>
       <div class="hamburger" onclick="toggleMenu()">
         ☰
@@ -21,9 +21,9 @@
     </header>
     <nav id="dropdown-menu" class="hidden">
       <ul>
-        <li><a href="/src/Bum.html">Bun Bo Nam Bo</a></li>
-        <li><a href="/src/Pho.html">Phở</a></li>
-        <li><a href="/src/Poke.html">Poke bowl</a></li>
+        <li><a href="./Bum.html">Bun Bo Nam Bo</a></li>
+        <li><a href="./Pho.html">Phở</a></li>
+        <li><a href="./Poke.html">Poke bowl</a></li>
       </ul>
     </nav>
 
@@ -33,16 +33,17 @@
       }
     </script>
 
+       
     <section class="hero-row">
-      <div class="pulfoto">
-        <img src="/public/foto/pul-obrazek.png" alt="Vietnamese Food" class="hero-img" />
-      </div>
+        <div class="pulfoto">
+          <img src="%BASE_URL%images/pul-obrazek.png" alt="Vietnamese Food" class="hero-img" />
+        </div>
+        <div class="logo-box">
+          <img src="%BASE_URL%images/text-logo.png" alt="Taste of Vietnam Logo" class="hero-logo" />
+          <p class="hero-subtext">Let us show you the true taste of authentic Vietnamese cuisine. Discover traditional recipes, cooking tips, and the secrets behind Vietnam’s most beloved dishes.</p>
+        </div>
+      </section>
 
-      <div class="logo-box">
-        <img src="/public/foto/text-logo.png" alt="Taste of Vietnam Logo" class="hero-logo" />
-        <p class="hero-subtext">Autentická chuť Vietnamu přímo u vás doma</p>
-      </div>
-    </section>
 
     <div class="red-line"></div>
 
@@ -52,32 +53,44 @@
         <button id="left-arrow">&#8592;</button>
 
         <div class="jidlo-karta visible">
-          <img src="/public/foto/bum-bo-nam-bo.png" alt="Bun bo nam bo">
-          <h3>Bun bo nam bo</h3>
-          <p>Rýžové nudle, hovězí maso, bylinky a omáčka.</p>
-          <a href="/src/Bum.html"><button class="recept-btn">RECEPT</button></a>
+          <div class="jidlo-min-img">
+            <img src="%BASE_URL%images/bum-bo-nam-bo.png" alt="Bun bo nam bo">
+          </div>
+          <div class="zbytek-jidlo">
+            <h3>Bun bo nam bo</h3>
+            <p>Rýžové nudle, hovězí maso, bylinky a omáčka.</p>
+            <a href="./Bum.html"><button class="recept-btn">RECEPT</button></a>
+          </div>
         </div>
 
 
         <div class="jidlo-karta">
-          <img src="/public/foto/pho.png" alt="Pho">
-          <h3>Pho</h3>
-          <p>Tradiční vývar s rýžovými nudlemi a hovězím masem.</p>
-          <a href="/src/Pho.html"><button class="recept-btn">RECEPT</button></a>
+          <div class="jidlo-min-img">
+            <img src="%BASE_URL%images/pho.png" alt="Pho">
+          </div>
+          <div class="zbytek-jidlo">
+            <h3>Pho</h3>
+            <p>Tradiční vývar s rýžovými nudlemi a hovězím masem.</p>
+            <a href="./Pho.html"><button class="recept-btn">RECEPT</button></a>
+          </div>
         </div>
 
 
         <div class="jidlo-karta">
-          <img src="/public/foto/poke-bowl.png" alt="Poke Bowl">
-          <h3>Poke Bowl</h3>
-          <p>Rýže, zelenina, losos a omáčky ve vietnamském stylu.</p>
-          <a href="/src/Poke.html"><button class="recept-btn">RECEPT</button></a>
+          <div class="jidlo-min-img">
+            <img src="%BASE_URL%images/poke-bowl.png" alt="Poke Bowl">
+          </div>
+          <div class="zbytek-jidlo">
+            <h3>Poke Bowl</h3>
+            <p>Rýže, zelenina, losos a omáčky ve vietnamském stylu.</p>
+            <a href="./Poke.html"><button class="recept-btn">RECEPT</button></a>
+          </div>
         </div>
 
         <button id="right-arrow">&#8594;</button>
       </div>
     </section>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/"></script>
 
     <div class="red-line"></div>
     <section class="rady">
@@ -103,7 +116,7 @@
       </div>
     </section>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/scripts/main.js"></script>
 
     <div class="red-line"></div>
     

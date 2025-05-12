@@ -56,14 +56,16 @@ body {
   display: none;
 }   
 
+
 .hero-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  width: 80%;
   max-width: 100%;
   padding: 0;
+  gap: 20%;
 }
+
 
 /* Levá půlka: obrázek */
 .pulfoto {
@@ -79,12 +81,11 @@ body {
 
 /* Pravá půlka: logo + text */
 .logo-box {
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: end;
   box-sizing: border-box;
 }
 
@@ -94,10 +95,10 @@ body {
 }
 
 .hero-subtext {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   margin-top: 0.5rem;
-  color: #333;
+  color: #000000;
 }
 
 .section-title {
@@ -156,11 +157,11 @@ body {
 
 .jidlo-karta h3 {
   margin: 10px 0 5px;
-  font-size: 1.2em;
+  font-size: 2rem;
 }
 
 .jidlo-karta p {
-  font-size: 0.95em;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -187,6 +188,7 @@ body {
   justify-content: center;
   gap: 20px;
 }
+
 
 .jidlo-karta.visible {
   display: block;
@@ -270,10 +272,9 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  background-color: #941c1c;
+  background-color: #8B0000;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 .dotaz-form {
@@ -355,32 +356,51 @@ body {
     width: 100%;
     padding: 0 1rem;
   }
-  
-  .jidlo-karta {
-    display: block;
+  .jidlo-karta.visible{
+    display: flex;
+    flex-direction: row;
     width: 100%;
     max-width: 90%;
-    padding: 1rem;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     background-color: #f7eaea;
+    gap:20%;
+  }
+  .jidlo-karta {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 90%;
+    height: 200px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #f7eaea;
+    gap:20%;
+  }
+  
+  .zbytek-jidlo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   .jidlo-karta img {
     width: 200px;
-    height: 100px;
+    height: 200px;
     margin: 0 auto 10px;
     display: block;
   }
   
   .jidlo-karta h3 {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+    margin: 10px 0 5px;
+    font-size: 2rem;
   }
   
   .jidlo-karta p {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
   
   .recept-btn {
