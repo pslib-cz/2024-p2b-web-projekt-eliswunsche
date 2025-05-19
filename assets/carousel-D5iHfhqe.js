@@ -1,0 +1,1 @@
+const e=document.querySelectorAll(".jidlo-karta"),o=document.getElementById("left-arrow"),d=document.getElementById("right-arrow");let t=0;function n(l){e.forEach((c,r)=>{c.classList.toggle("visible",r===l)})}o.addEventListener("click",()=>{t=(t-1+e.length)%e.length,n(t)});d.addEventListener("click",()=>{t=(t+1)%e.length,n(t)});n(t);
