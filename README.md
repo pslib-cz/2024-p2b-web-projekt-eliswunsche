@@ -17,3 +17,4 @@ Web je rozdělen do několika hlavních částí:
 ## 🎯 Cíl projektu
 Hlavním cílem webu je vzdělávat návštěvníky o vietnamské kuchyni a inspirovat je k vaření doma. Stránka je určena jak začátečníkům, tak pokročilým milovníkům asijské kuchyně.
 
+[Odkaz na živý web](https://pslib-cz.github.io/2024-p2b-web-projekt-eliswunsche/)
